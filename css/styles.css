@@ -1,0 +1,114 @@
+:root {
+  --primary-color: rgb(229, 9, 20);
+  --secondary-color: rgba(255, 255, 255, 0);
+  --text-color: rgb(255, 255, 255);
+}
+
+.main-container {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.hero-section {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.7889) 8.333%,
+      rgba(0, 0, 0, 0.7556) 16.67%,
+      rgba(0, 0, 0, 0.7) 25%,
+      rgba(0, 0, 0, 0.6222) 33.33%,
+      rgba(0, 0, 0, 0.5222) 41.67%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.2778) 58.33%,
+      rgba(0, 0, 0, 0.1778) 66.67%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0.04444) 83.33%,
+      rgba(0, 0, 0, 0.01111) 91.67%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../images/hero.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top-wrapper {
+  height: 7.5rem;
+  max-width: 66rem;
+  margin: 0 auto -7.5rem auto;
+  padding: 0 5rem;
+}
+
+.top-wrapper-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin-left: -16px;
+}
+
+.logo {
+  width: 32.28%;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  width: 9.25rem;
+  height: 2.5rem;
+  display: block;
+}
+
+.btn-sign-in {
+  width: auto;
+  margin-left: 16px;
+  padding: 3px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 0.875rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+  min-height: 2rem;
+  min-width: 4.81rem;
+  width: auto;
+  padding: 0;
+}
+
+/* Media queries */
+
+/* Small screens */
+@media (max-width: 599px) {
+  .logo > img {
+    width: 5.5rem;
+    height: 1.5rem;
+  }
+
+  .top-wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 600px) and (max-width: 959px) {
+  .logo > img {
+    width: 5.5rem;
+    height: 1.5rem;
+  }
+
+  .top-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 960px) {
+  .top-wrapper {
+    padding: 0 5rem;
+  }
+}
