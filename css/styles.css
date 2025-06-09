@@ -79,7 +79,11 @@
   width: auto;
   padding: 0;
 }
-
+.btn:hover {
+  background-color: rgb(200, 0, 15);
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
 /* Media queries */
 
 /* Small screens */
