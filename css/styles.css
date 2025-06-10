@@ -35,7 +35,7 @@
   height: 7.5rem;
   max-width: 66rem;
   margin: 0 auto -7.5rem auto;
-  padding: 0 9.25rem;
+  padding: 0 5rem;
 }
 
 .top-wrapper-content {
@@ -43,7 +43,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 5.5rem;
+  height: 5rem;
   margin-left: -1rem;
 }
 
@@ -181,7 +181,7 @@
 /* Small screens */
 @media (max-width: 599px) {
   .logo>img {
-    width: 5.5rem;
+    width: 5.5625rem;
     height: 1.5rem;
   }
 
@@ -211,7 +211,7 @@
 /* Medium screens */
 @media (min-width: 600px) and (max-width: 959px) {
   .logo>img {
-    width: 5.5rem;
+    width: 5.5625rem;
     height: 1.5rem;
   }
 
@@ -234,8 +234,12 @@
 }
 
 /* Large screens */
-@media (min-width: 960px) and (max-width:1279px) {
+@media (min-width:1280px) {
   .top-wrapper {
-    padding: 0 5rem;
+    padding: 0 9.25rem;
+  }
+
+  .top-wrapper-content {
+    height: 5.5rem;
   }
 }
