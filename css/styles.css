@@ -6,24 +6,28 @@
 }
 
 .main-container {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   color: var(--text-color);
+  background-color: black;
 }
 
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.7889) 8.333%,
-      rgba(0, 0, 0, 0.7556) 16.67%,
-      rgba(0, 0, 0, 0.7) 25%,
-      rgba(0, 0, 0, 0.6222) 33.33%,
-      rgba(0, 0, 0, 0.5222) 41.67%,
-      rgba(0, 0, 0, 0.4) 50%,
-      rgba(0, 0, 0, 0.2778) 58.33%,
-      rgba(0, 0, 0, 0.1778) 66.67%,
-      rgba(0, 0, 0, 0.1) 75%,
-      rgba(0, 0, 0, 0.04444) 83.33%,
-      rgba(0, 0, 0, 0.01111) 91.67%,
-      rgba(0, 0, 0, 0) 100%),
+  background-image: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.85) 3%,
+      rgba(0, 0, 0, 0.8465) 11.08%,
+      rgba(0, 0, 0, 0.8361) 19.17%,
+      rgba(0, 0, 0, 0.8187) 27.25%,
+      rgba(0, 0, 0, 0.7944) 35.33%,
+      rgba(0, 0, 0, 0.7632) 43.42%,
+      rgba(0, 0, 0, 0.725) 51.5%,
+      rgba(0, 0, 0, 0.6868) 59.58%,
+      rgba(0, 0, 0, 0.6556) 67.67%,
+      rgba(0, 0, 0, 0.6313) 75.75%,
+      rgba(0, 0, 0, 0.6139) 83.83%,
+      rgba(0, 0, 0, 0.6035) 91.92%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
     url("../images/hero.jpg");
   background-attachment: scroll;
   background-size: cover;
@@ -54,7 +58,7 @@
   align-items: center;
 }
 
-.logo>img {
+.logo > img {
   width: 9.25rem;
   height: 2.5rem;
   display: block;
@@ -68,43 +72,59 @@
 
 /* Hero content */
 .hero-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0rem 2rem 2rem 2rem;
-  min-height: 37rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 120rem;
+  align-items: center;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-wrapper-content {
-  max-width: 700px;
-  margin: 0 auto;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
+  z-index: 3;
 }
 
 .content-container {
-  width: 31.65rem;
+  max-width: 31.75rem;
+  padding: 0 2rem 2rem 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 125%;
   margin-top: 4rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-text p {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
-.Subscription-wrapper p {
+.email-form h3 {
   font-size: 1rem;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .email-input {
@@ -137,16 +157,16 @@
   gap: 0.5rem;
 }
 
-.get-started>img {
+.get-started > img {
   margin-bottom: 0.14rem;
 }
 
-.get-started>span {
+.get-started > span {
   font-size: 1.125rem;
 }
 
 .get-started,
-.email-input input[type='email'] {
+.email-input input[type="email"] {
   height: 3.5rem;
 }
 
@@ -180,7 +200,7 @@
 
 /* Small screens */
 @media (max-width: 599px) {
-  .logo>img {
+  .logo > img {
     width: 5.5625rem;
     height: 1.5rem;
   }
@@ -191,18 +211,19 @@
 
   .content-container {
     width: 100%;
+    margin-top: -2rem;
   }
 
   .hero-text h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
 
-  .hero-text p,
-  .Subscription-wrapper p {
+  .hero-text p {
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
-
   .hero-wrapper-content {
     width: 100%;
   }
@@ -210,7 +231,7 @@
 
 /* Medium screens */
 @media (min-width: 600px) and (max-width: 959px) {
-  .logo>img {
+  .logo > img {
     width: 5.5625rem;
     height: 1.5rem;
   }
@@ -220,26 +241,44 @@
   }
 
   .content-container {
-    width: 27rem;
+    max-width: 27rem;
   }
 
   .hero-text h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
 
   .hero-text p {
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
 }
 
 /* Large screens */
-@media (min-width:1280px) {
+@media (min-width: 1280px) {
   .top-wrapper {
     padding: 0 9.25rem;
   }
 
   .top-wrapper-content {
     height: 5.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .content-container {
+    margin-top: 3rem;
+    max-width: 36.75rem;
   }
 }
