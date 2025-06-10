@@ -2,16 +2,16 @@
   --primary-color: rgb(229, 9, 20);
   --secondary-color: rgba(255, 255, 255, 0);
   --text-color: rgb(255, 255, 255);
+  --hover-color: rgb(200, 0, 15);
 }
 
 .main-container {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--text-color);
 }
 
 .hero-section {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.8) 0%,
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0.7889) 8.333%,
       rgba(0, 0, 0, 0.7556) 16.67%,
       rgba(0, 0, 0, 0.7) 25%,
@@ -23,10 +23,9 @@
       rgba(0, 0, 0, 0.1) 75%,
       rgba(0, 0, 0, 0.04444) 83.33%,
       rgba(0, 0, 0, 0.01111) 91.67%,
-      rgba(0, 0, 0, 0) 100%
-    ),
+      rgba(0, 0, 0, 0) 100%),
     url("../images/hero.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,7 +35,7 @@
   height: 7.5rem;
   max-width: 66rem;
   margin: 0 auto -7.5rem auto;
-  padding: 0 5rem;
+  padding: 0 9.25rem;
 }
 
 .top-wrapper-content {
@@ -44,8 +43,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  margin-left: -16px;
+  height: 5.5rem;
+  margin-left: -1rem;
 }
 
 .logo {
@@ -55,7 +54,7 @@
   align-items: center;
 }
 
-.logo > img {
+.logo>img {
   width: 9.25rem;
   height: 2.5rem;
   display: block;
@@ -65,6 +64,90 @@
   width: auto;
   margin-left: 16px;
   padding: 3px;
+}
+
+/* Hero content */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0rem 2rem 2rem 2rem;
+  min-height: 37rem;
+}
+
+.hero-wrapper-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-container {
+  width: 31.65rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.Subscription-wrapper p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 1rem 0 0 0;
+  justify-content: center;
+}
+
+.email-input input[type="email"] {
+  padding: 0 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.email-input .btn {
+  height: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.get-started {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.get-started>img {
+  margin-bottom: 0.14rem;
+}
+
+.get-started>span {
+  font-size: 1.125rem;
+}
+
+.get-started,
+.email-input input[type='email'] {
+  height: 3.5rem;
 }
 
 .btn {
@@ -79,16 +162,25 @@
   width: auto;
   padding: 0;
 }
+
 .btn:hover {
-  background-color: rgb(200, 0, 15);
+  background-color: var(--hover-color);
   cursor: pointer;
   transition: background-color 0.25s ease;
 }
-/* Media queries */
+
+/* Trending placeholder */
+.trending-content {
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: black;
+}
+
+/* Media Queries */
 
 /* Small screens */
 @media (max-width: 599px) {
-  .logo > img {
+  .logo>img {
     width: 5.5rem;
     height: 1.5rem;
   }
@@ -96,11 +188,29 @@
   .top-wrapper {
     padding: 0 1.5rem;
   }
+
+  .content-container {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p,
+  .Subscription-wrapper p {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .hero-wrapper-content {
+    width: 100%;
+  }
 }
 
 /* Medium screens */
 @media (min-width: 600px) and (max-width: 959px) {
-  .logo > img {
+  .logo>img {
     width: 5.5rem;
     height: 1.5rem;
   }
@@ -108,10 +218,23 @@
   .top-wrapper {
     padding: 0 2rem;
   }
+
+  .content-container {
+    width: 27rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    font-weight: normal;
+  }
 }
 
 /* Large screens */
-@media (min-width: 960px) {
+@media (min-width: 960px) and (max-width:1279px) {
   .top-wrapper {
     padding: 0 5rem;
   }
