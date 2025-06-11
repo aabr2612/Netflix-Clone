@@ -1,30 +1,30 @@
 @font-face {
-  font-family: 'Netflix Sans';
-  src: url('../fonts/NetflixSans-Light.otf') format('opentype');
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Netflix Sans';
-  src: url('../fonts/NetflixSans-Regular.otf') format('opentype');
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Netflix Sans';
-  src: url('../fonts/NetflixSans-Medium.otf') format('opentype');
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Netflix Sans';
-  src: url('../fonts/NetflixSans-Bold.otf') format('opentype');
+  font-family: "Netflix Sans";
+  src: url("../fonts/NetflixSans-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,6 @@
   --hover-color: rgb(200, 0, 15);
 }
 
-
 .main-container {
   font-family: "Netflix Sans";
   color: var(--text-color);
@@ -46,7 +45,8 @@
 
 /* Hero section */
 .hero-section {
-  background-image: linear-gradient(360deg,
+  background-image: linear-gradient(
+      360deg,
       rgba(0, 0, 0, 0.85) 3%,
       rgba(0, 0, 0, 0.8465) 11.08%,
       rgba(0, 0, 0, 0.8361) 19.17%,
@@ -59,7 +59,8 @@
       rgba(0, 0, 0, 0.6313) 75.75%,
       rgba(0, 0, 0, 0.6139) 83.83%,
       rgba(0, 0, 0, 0.6035) 91.92%,
-      rgba(0, 0, 0, 0.6) 100%),
+      rgba(0, 0, 0, 0.6) 100%
+    ),
     url("../images/hero.jpg");
   background-attachment: scroll;
   background-size: cover;
@@ -91,7 +92,7 @@
   align-items: center;
 }
 
-.logo>img {
+.logo > img {
   display: block;
   width: 9.25rem;
   height: 2.5rem;
@@ -131,7 +132,7 @@
 .content-container {
   max-width: 31.75rem;
   padding: 0 2rem 2rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   text-align: center;
   align-self: center;
   display: flex;
@@ -156,6 +157,7 @@
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+  line-height: 1.5;
 }
 
 .email-input {
@@ -171,6 +173,7 @@
   font-size: 1rem;
   border-radius: 0.25rem;
   border: 1px solid rgb(118, 118, 118);
+  box-sizing: border-box;
   flex: 1 1 48px;
   max-width: 500px;
   width: auto;
@@ -180,11 +183,11 @@
 
 .email-input input[type="email"]::placeholder {
   color: rgb(172, 165, 165);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .email-input .btn {
-  padding: 0 1.9rem;
+  padding: 0 1.5rem;
   font-size: 1.125rem;
   white-space: nowrap;
   width: 11.25rem;
@@ -192,10 +195,6 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
-}
-
-.get-started>img {
-  margin-top: 1px;
 }
 
 .get-started,
@@ -231,10 +230,9 @@
 }
 
 /* Media Queries */
-
 /* Small screens */
 @media (max-width: 599px) {
-  .logo>img {
+  .logo > img {
     width: 5.5625rem;
     height: 1.5rem;
   }
@@ -245,7 +243,7 @@
 
   .content-container {
     width: 100%;
-    margin-top: -2rem;
+    margin-top: -1rem;
   }
 
   .hero-text h1 {
@@ -271,7 +269,6 @@
 
   .email-input .btn {
     width: 10rem;
-    padding: 0 1.5rem;
     margin: 0 auto;
   }
 
@@ -283,7 +280,7 @@
 
 /* Medium screens */
 @media (min-width: 600px) and (max-width: 959px) {
-  .logo>img {
+  .logo > img {
     width: 5.5625rem;
     height: 1.5rem;
   }
@@ -294,6 +291,7 @@
 
   .content-container {
     max-width: 27rem;
+    margin: 0.8rem 0;
   }
 
   .hero-text h1 {
@@ -306,6 +304,9 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1rem;
+  }
+  .email-input .btn {
+    min-width: 11.25rem; /* 180px */
   }
 }
 
@@ -338,7 +339,5 @@
   .email-input .btn {
     font-size: 1.5rem;
     width: 13.375rem;
-    padding: 0 2rem;
-    font-weight: 650;
   }
 }
