@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('../fonts/NetflixSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('../fonts/NetflixSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('../fonts/NetflixSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('../fonts/NetflixSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --primary-color: rgb(229, 9, 20);
   --secondary-color: rgba(255, 255, 255, 0);
@@ -7,7 +39,7 @@
 
 
 .main-container {
-  font-family: sans-serif;
+  font-family: "Netflix Sans";
   color: var(--text-color);
   background-color: black;
 }
@@ -148,6 +180,7 @@
 
 .email-input input[type="email"]::placeholder {
   color: rgb(172, 165, 165);
+  font-size: 1.05rem;
 }
 
 .email-input .btn {
@@ -175,7 +208,7 @@
   background-color: var(--primary-color);
   color: var(--text-color);
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
   border: none;
   border-radius: 0.25rem;
   min-height: 2rem;
@@ -223,7 +256,6 @@
 
   .hero-text p {
     font-size: 1rem;
-    font-weight: 100;
     margin-bottom: 1rem;
   }
 
